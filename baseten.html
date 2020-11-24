@@ -1,25 +1,51 @@
 <!DOCTYPE html>
 <html>
+<head>
+<title>FoC</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
 <body>
 
-  
-<h2>Binary to Base 10</h2>
-<img id="myImage" src="binary.png" style="width:300px">
-<p>Enter any number in Base 2 from 1-9 in 4 bits:</p>
-<p><input type="number" id="inputBin" value=""></p>
+<section>
+<h2>DECIMAL TO BINARY CONVERTER</h2>
+<hr>	
 
 
-<button onclick="binToHex()">Submit</button>
 
-<p>Base 10 Value : </p>
+
+<p>Enter first number:</p>
+<input type = "number" id="inputdec1" >
+<p></p>
+
+<p>Enter second number:</p>
+<input type = "number" id="inputdec2" >
+<p></p>
+
+<button onclick="decToBin()">Submit</button>
+<p></p>
+<p>BINARY Values : </p>
 <p id="demo"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
 
 <script>
-function binToHex() {
-  var x = document.getElementById("inputBin").value;
-  var hexOut = parseInt(x , 2).toString(16).toUpperCase();
-  document.getElementById("demo").innerHTML = hexOut;
+
+  
+  function decToBin() {
+  var num1 = document.getElementById("inputdec1").value;
+  var res1 = (num1 >>> 0).toString(2);
+  document.getElementById("demo").innerHTML = res1;
+  var num2 = document.getElementById("inputdec2").value;
+  var res2 = (num2 >>> 0).toString(2);
+  document.getElementById("demo2").innerHTML = res2;
+  var ans= +num1 + +num2;
+  var res3 = (ans >>> 0).toString(2);
+  document.getElementById("demo3").innerHTML = res3;
+ 
   }
+  
 </script>
 
 
@@ -27,15 +53,13 @@ function binToHex() {
 </section>
 
 
-
-
-<h2>Binary Addition</h2>
-<img id="myImage" src="add.png" style="width:700px"></p>
 <a href="index.html">Back to Home</a></h3>
+
+<footer>
+  <p>@ Powered by UB</p>
+</footer>
+
 </body>
 </html>
-
-
-
 
 <
